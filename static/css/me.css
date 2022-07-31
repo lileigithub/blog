@@ -28,6 +28,9 @@ body {
     margin-top: 0.3em !important;
     margin-bottom: 0.3em !important;
 }
+.m-margin-bottom-mini {
+    margin-bottom: 0.2em !important;
+}
 
 /*text*/
 .m-text-thin {
@@ -76,5 +79,8 @@ body {
     }
     .m-mobile-show {
         display: block !important;
+    }
+    .m-mobile-wide {
+        width: 100% !important;
     }
 }

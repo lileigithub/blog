@@ -67,15 +67,151 @@
                     正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
                     正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文正文
                 </p>
-
+                <!--标签-->
+                <div class="ui basic segment">
+                    <div class="ui basic teal left pointing label">方法论</div>
+                </div>
+                <!--赞赏-->
+                <div class="ui basic segment center aligned">
+                    <button id="payButton" class="ui orange basic button circular">赞赏</button>
+                </div>
+                <div class="ui payQ flowing popup transition hidden">
+                    <div class="ui basic label">
+                        <div class="ui images" style="font-size: inherit">
+                            <div class="image">
+                                <img src="./static/images/qrcode_www.bilibili.com.png" alt="" class="ui bordered rounded image" style="width: 120px">
+                                <div>支付宝</div>
+                            </div>
+                            <div class="image">
+                                <img src="./static/images/qrcode_www.bilibili.com.png" alt="" class="ui bordered rounded image" style="width: 120px">
+                                <div>微信</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             <!--博客信息-->
             <div class="ui attached positive message">
-                博客信息
+                <div class="ui grid middle aligned">
+                    <div class="eleven wide column">
+                        <ui class="list">
+                            <li>作者：李磊</li>
+                            <li>发表时间：</li>
+                            <li>版权声明：</li>
+                            <li>公众号转载：</li>
+                        </ui>
+                    </div>
+                    <div class="five wide column">
+                        <img src="./static/images/qrcode_www.bilibili.com.png" alt="" class="ui bordered rounded image right floated" style="width: 110px">
+                    </div>
+                </div>
             </div>
             <!--留言-->
             <div class="ui bottom attached segment">
-                留言
+                <!--留言列表-->
+                <div class="ui teal segment">
+                    <div class="ui comments">
+                        <h3 class="ui dividing header">Comments</h3>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://img.temp.im/100x100/09f/fff">
+                            </a>
+                            <div class="content">
+                                <a class="author">Matt</a>
+                                <div class="metadata">
+                                    <span class="date">Today at 5:42PM</span>
+                                </div>
+                                <div class="text">
+                                    How artistic!
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://img.temp.im/100x100/09f/fff">
+                            </a>
+                            <div class="content">
+                                <a class="author">Elliot Fu</a>
+                                <div class="metadata">
+                                    <span class="date">Yesterday at 12:30AM</span>
+                                </div>
+                                <div class="text">
+                                    <p>This has been very useful for my research. Thanks as well!</p>
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                            <div class="comments">
+                                <div class="comment">
+                                    <a class="avatar">
+                                        <img src="https://img.temp.im/100x100/09f/fff">
+                                    </a>
+                                    <div class="content">
+                                        <a class="author">Jenny Hess</a>
+                                        <div class="metadata">
+                                            <span class="date">Just now</span>
+                                        </div>
+                                        <div class="text">
+                                            Elliot you are always so right :)
+                                        </div>
+                                        <div class="actions">
+                                            <a class="reply">回复</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <a class="avatar">
+                                <img src="https://img.temp.im/100x100/09f/fff">
+                            </a>
+                            <div class="content">
+                                <a class="author">Joe Henderson</a>
+                                <div class="metadata">
+                                    <span class="date">5 days ago</span>
+                                </div>
+                                <div class="text">
+                                    Dude, this is awesome. Thanks so much
+                                </div>
+                                <div class="actions">
+                                    <a class="reply">回复</a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="ui form">
+                            <div class="field">
+                                <textarea name="content" placeholder="请输入评论..."></textarea>
+                            </div>
+                            <div class="fields">
+                                <div class="field m-mobile-wide m-margin-bottom-mini">
+                                    <div class="ui left icon input">
+                                        <i class="user icon"></i>
+                                        <input type="text" name="nickname" placeholder="姓名">
+                                    </div>
+
+                                </div>
+                                <div class="field m-mobile-wide m-margin-bottom-mini">
+                                    <div class="ui left icon input">
+                                        <i class="mail icon"></i>
+                                        <input type="text" name="email" placeholder="邮箱">
+                                    </div>
+                                </div>
+                                <div class="field m-mobile-wide m-margin-bottom-mini">
+                                    <button class="ui teal button m-mobile-wide">
+                                        <i class="icon edit"></i> 发布
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </div>
             <br>
             <br>
@@ -131,6 +267,11 @@
 <script>
     $('.menu.toggle').click(function (){
         $('.m-item').toggleClass("m-mobile-hide");
+    })
+    $('#payButton').popup({
+        popup : $(".payQ.popup"),
+        on : 'click',
+        position: 'bottom center'
     })
 </script>
 </body>
