@@ -3,6 +3,9 @@ body {
     background-size: 100%;
 }
 
+.m-padded {
+    padding: 1em !important;
+}
 .m-padded-tiny {
     padding: 0.3em !important;
 }
@@ -67,6 +70,14 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+}
+.m-fixed{
+    position: fixed !important;
+    z-index: 10 !important;
+}
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
 }
 
 .m-mobile-show {
